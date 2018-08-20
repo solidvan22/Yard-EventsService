@@ -9,6 +9,8 @@ var bodyParser  = require('body-parser');
 var morgan      = require('morgan');
 var config 		= require('./config'); // get our config file
 
+// =================================================================
+// Servidor de sockets
 var server = require('http').createServer(app);
 io = require('socket.io')(server);
 io.on('connection', function(client){
